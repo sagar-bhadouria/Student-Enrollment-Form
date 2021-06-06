@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- whole content of web page -->
+    <div class="body-container">
+      <!-- navbar of web page -->
+      <div id="header-container">
+        <h4 class="header-heading">Student Enrollment Form</h4>
+      </div>
+
+      <!-- form and user div -->
+      <div id="main" class="main-container">
+        <!-- form div -->
+        <div id="registration-form" class="form-container">
+          <form class="container" action="#" onsubmit="registerUser(event)">
+            <!-- name input -->
+            <div class="form-group row">
+              <label for="InputName" class="col-4">Name</label>
+              <input
+                type="text"
+                required
+                class="form-control col-6"
+                id="InputName"
+                aria-describedby="Name"
+                placeholder="Enter Your Name"
+              />
+            </div>
+            <!-- email input -->
+            <div class="form-group row">
+              <label for="InputEmail" class="col-4">Email</label>
+              <input
+                required
+                type="email"
+                class="form-control col-6"
+                id="InputEmail"
+                aria-describedby="Email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <!-- Website url input -->
+            <div class="form-group row">
+              <label for="InputWebsite" class="col-4">Website</label>
+              <input
+                required
+                type="url"
+                class="form-control col-6"
+                id="InputWebsite"
+                placeholder="Website url"
+              />
+            </div>
+            <!-- Image URL input  -->
+            <div class="form-group row">
+              <label for="InputImage" class="col-4">Image Url</label>
+              <input
+                required
+                type="url"
+                class="form-control col-6"
+                id="InputImage"
+                placeholder="Image url"
+              />
+            </div>
+            <!-- Gender radio input -->
+            <div class="form-group row">
+              <legend class="col-form-label col-4">Gender</legend>
+              <div class="col-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="gender-radio-male"
+                    value="Male"
+                    checked
+                  />
+                  <label class="form-check-label" for="gender-radio-male">
+                    Male
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="gender-radio-female"
+                    value="Female"
+                  />
+                  <label class="form-check-label" for="gender-radio-female">
+                    Female
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- skills check boxes -->
+            <div class="form-group row">
+              <legend class="col-form-label col-4">Skills</legend>
+              <div class="col-8">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    name="skills"
+                    type="checkbox"
+                    id="java-check"
+                    value="JAVA"
+                    checked
+                  />
+                  <label class="form-check-label" for="java-check">JAVA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    name="skills"
+                    type="checkbox"
+                    id="html-check"
+                    value="HTML"
+                  />
+                  <label class="form-check-label" for="html-check">HTML</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    name="skills"
+                    type="checkbox"
+                    id="css-check"
+                    value="CSS"
+                  />
+                  <label class="form-check-label" for="css-check">CSS</label>
+                </div>
+              </div>
+            </div>
+            <!-- submit button -->
+            <button type="submit" class="btn btn-primary">
+              Enrolled Student
+            </button>
+            <!-- reset button -->
+            <button type="reset" class="btn btn-danger">Clear</button>
+          </form>
+        </div>
+
+        <!-- seprators -->
+        <div class="seprator--vertical d-none d-md-block"></div>
+        <div class="seprator--horizontal d-lg-none d-md-none"></div>
+
+        <!-- Enrolled Student list section -->
+        <div id="users-container" class="users-list-container">
+          <h3 class="text-center mb-5 font-weight-bold">Enrolled Student</h3>
+          <div class="flex-container">
+            <div class="description-head">Description</div>
+            <div class="image-head">Image</div>
+          </div>
+          <div id="UsersList" class="users-list">
+            <!-- <div class="user-card">
+              <div id="user-description" class="user-description-card">
+                <p class="text-wrap text-break">John Doe</p>
+                <p>Male</p>
+                <p class="text-wrap text-break">john.doe@gmail.com</p>
+                <a
+                  href="http://www.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >www.johndoe.com</a
+                >
+                <p>JAVA, HTML</p>
+              </div>
+              <div id="user-image" class="user-image-card">
+                <img
+                  src="https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+                  alt="john"
+                />
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!--Page footer  -->
+      <div id="footer-container">
+        <h6>Copyright 2020-2021 Fresher Training</h6>
+      </div>
+    </div>
+    <script src="JS/UserDetails.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
